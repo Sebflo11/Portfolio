@@ -15,7 +15,7 @@ document.addEventListener('mousemove', function(e){
 
 let links = Array.from(document.querySelectorAll('a'))
 
-console.log(links)
+// console.log(links)
 
 links.forEach(link => {
     link.addEventListener('mouseover', () =>{

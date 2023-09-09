@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 *{
@@ -67,6 +63,7 @@ body{
     -webkit-font-smoothing: antialised;
     -moz-osx-font-smoothing: grayscale;
     cursor: none;
+    justify-content: space-around;
 }
 
 .circulos{
@@ -117,7 +114,7 @@ body{
 nav{
     max-width: 1000em;
     margin-top: auto;
-    padding: 2em 3em;
+    padding: 2em 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -180,6 +177,7 @@ nav{
 .main{
     margin: 0 0 1em;
     text-align: center;
+    justify-items: center;
     position: relative;
     z-index: 2;
 }
@@ -187,13 +185,14 @@ nav{
 /* SECCION DE INICIO */
 .section{
     width: 100%;
-    min-height: 80vh;
+    min-height: 90vh;
     margin: 1em 0;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    justify-items: center;
 }
 .section .info{
     font-size: 1.2em;
@@ -229,10 +228,18 @@ nav{
 }
 .section .h2{
     font-family: var(--tipo-titular);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 7em;
     line-height: 1em;
 }
+
+/* @media (max-width: 400px){
+    .section .h2{
+        margin-left: .2em;
+        margin-right: .2em;
+    }
+} */
+
 .section .h3{
     font-family: var(--tipo-principal);
     font-size: 3em;
@@ -241,8 +248,7 @@ nav{
 /* SECCION TRABAJOS */
 .section .grid{
     width: 90%;
-    height: 100%;
-    max-width: 40em;
+    max-width: 70em;
     margin: 1em 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -264,6 +270,7 @@ nav{
 }
 .section .img{
     width: 100%;
+    height: 15em;
     border-radius: .5em;
 }
 .section .wide{
@@ -299,6 +306,7 @@ nav{
 }
 .works{
    color: white;
+   display: flex;
 }
 .works .h2{
     font-size: 6em;
@@ -308,11 +316,11 @@ nav{
 /* SECCION ABOUT */
 .about .h2{
     font-size: 6em;
-    margin: 0 0 2rem;
+    margin: 2em 0 2rem;
 }
 .about .p{
     max-width: 40em;
-    margin: 0 0 2em;
+    margin: 0 1em 2em 1em;
     font-size: 1em;
     text-align: left;
 }
@@ -369,8 +377,26 @@ nav{
     border-radius: 50%;
     mix-blend-mode: difference;
 }
+.cursor .cursor1{
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
 
 .cursor.mini{
     transform: scale(0.5);
     transition: all .1s linear;
+}
+
+@media (max-width: 500px){
+    .nav-logo a{
+        color: transparent;
+    }
 }
