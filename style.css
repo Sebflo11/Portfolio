@@ -241,23 +241,21 @@ nav{
 /* SECCION TRABAJOS */
 .section .grid{
     width: 90%;
+    height: 100%;
     max-width: 40em;
     margin: 1em 0;
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: 1em;
+    grid-auto-flow: dense;
 }
 .section .article{
     width: 100%;
     min-height: 20vh;
-
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column row;
     justify-content: center;
     align-items: center;
-
-
     position: relative;
 }
 .section .figure{
@@ -267,6 +265,12 @@ nav{
 .section .img{
     width: 100%;
     border-radius: .5em;
+}
+.section .wide{
+    grid-column: span 2;
+}
+.section .tall{
+    grid-row: span 2;
 }
 .section .h4{
     width: 100%;
@@ -283,8 +287,8 @@ nav{
     align-items: center;
 
     color: white;
-    font-size: 1.8em;
-    font-family: var(--tipo-principal);
+    font-size: 2em;
+    font-family: var(--tipo-titular);
     opacity: 0;
     transform: translateZ(1) scale(1.2);
     transition: all .5s ease;
