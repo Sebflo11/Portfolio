@@ -294,10 +294,6 @@ nav{
 }
 .works{
     color: white;
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
 }
 .works .h2{
     font-size: 6em;
